@@ -1,0 +1,48 @@
+{
+  "name": "n8n-nodes-shapelessai",
+  "version": "0.1.0",
+  "description": "ShapelessAI for n8n: schedule and publish social media posts to X, LinkedIn, Instagram, TikTok, YouTube, Threads, Bluesky, Facebook and more.",
+  "keywords": [
+    "n8n-community-node-package",
+    "shapelessai",
+    "social media",
+    "scheduler",
+    "linkedin",
+    "bluesky"
+  ],
+  "license": "MIT",
+  "homepage": "https://shapelessai.com",
+  "author": {
+    "name": "ShapelessAI",
+    "email": "founders@shapelessai.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FirstClassTree/n8n-nodes-shapelessai.git"
+  },
+  "scripts": {
+    "build": "tsc && cp nodes/ShapelessAi/*.svg dist/nodes/ShapelessAi/",
+    "lint": "n8n-node lint"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": true,
+    "credentials": [
+      "dist/credentials/ShapelessAIApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/ShapelessAi/ShapelessAi.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "^0.53.3",
+    "n8n-workflow": "2.16.0",
+    "typescript": "~5.9.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
